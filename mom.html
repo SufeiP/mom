@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <body>
+
+	 
+	  <div class="box">
+<img class="image" src="w1.jpg">
+  <div class="pop">
+    <div class="text1">Happy Mother's day!</div>
+	<div id="top" <img src="w1.jpg"> </div>
+
+  </div>
+  
+	<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="h1.jpg" style="width:100%">
+    <div class="text">Mom, thank you for everything you did for me! From taking care of me as a baby, to bringing me to America, I can't thank you enough.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="h2.jpg" style="width:100%">
+    <div class="text">You are the one who helped our family survive through the most difficult times.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="h3.jpg" style="width:100%">
+    <div class="text">Although sometimes I makes you really mad and upset, I still want you to know that....</div>
+  </div>
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="h4.jpg" style="width:100%">
+    <div class="text">.....I love you!</div>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<style>
+
+body
+
+	{
+	background-color:pink;
+	}
+* {box-sizing:border-box}
+
+  position: relative;
+  width: 100%;
+}
+.image {
+  display: block;
+  width: 1%;
+  visibility:hidden;
+
+}
+
+.pop {
+  left:24%;
+  position: absolute;
+  bottom: 90%;
+  background-color: pink;
+  overflow: show;
+  width: 52%;
+  transition: 2s ease;
+}
+
+.box:hover .pop {
+  bottom: 30%;
+  height: 7%;
+}
+
+.text1 {
+  font-size:50px;
+  font-family: script; 
+  color: mistyrose; 
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a pink background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: pink;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Brush Script mt, cursive;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: pink;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #F0AAEC;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #EF85E8;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+</style>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+    </body>
+  </head>
+ </html>
